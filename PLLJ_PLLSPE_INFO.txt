@@ -1,0 +1,50 @@
+PLL_Name	pll72:inst321|pll72_0002:pll72_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL
+PLLJITTER	19
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	pll72:inst321|pll72_0002:pll72_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	sdias:inst|sdias_0002:sdias_inst|altera_xcvr_native_av:u_phy|av_xcvr_native:gen_native_inst.av_xcvr_native_insts[0].gen_bonded_group_native.av_xcvr_native_inst|av_pcs:inst_av_pcs|av_pcs_ch:ch[0].inst_av_pcs_ch|av_hssi_8g_tx_pcs_rbc:inst_av_hssi_8g_tx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	sdias:inst|sdias_0002:sdias_inst|altera_xcvr_native_av:u_phy|av_xcvr_native:gen_native_inst.av_xcvr_native_insts[0].gen_bonded_group_native.av_xcvr_native_inst|av_pma:inst_av_pma|av_tx_pma:av_tx_pma|av_tx_pma_ch:tx_pma_insts[0].av_tx_pma_ch_inst|tx_pma_ch.tx_cgb
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	sdias:inst|sdias_0002:sdias_inst|altera_xcvr_native_av:u_phy|av_xcvr_plls:gen_native_inst.av_xcvr_native_insts[0].gen_bonded_group_plls.gen_tx_plls.tx_plls|pll[0].pll.cmu_pll.pll_mux.pll_refclk_select_mux
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	sdias:inst|sdias_0002:sdias_inst|altera_xcvr_native_av:u_phy|av_xcvr_plls:gen_native_inst.av_xcvr_native_insts[0].gen_bonded_group_plls.gen_tx_plls.tx_plls|pll[0].pll.cmu_pll.tx_pll
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	sdiii:inst164|sdiii_0002:sdiii_inst|altera_xcvr_native_av:u_phy|av_xcvr_native:gen_native_inst.av_xcvr_native_insts[0].gen_bonded_group_native.av_xcvr_native_inst|av_pcs:inst_av_pcs|av_pcs_ch:ch[0].inst_av_pcs_ch|av_hssi_8g_rx_pcs_rbc:inst_av_hssi_8g_rx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	sdiii:inst164|sdiii_0002:sdiii_inst|altera_xcvr_native_av:u_phy|av_xcvr_native:gen_native_inst.av_xcvr_native_insts[0].gen_bonded_group_native.av_xcvr_native_inst|av_pma:inst_av_pma|av_rx_pma:av_rx_pma|rx_pmas[0].rx_pma.cdr_refclk_mux0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	sdiii:inst164|sdiii_0002:sdiii_inst|altera_xcvr_native_av:u_phy|av_xcvr_native:gen_native_inst.av_xcvr_native_insts[0].gen_bonded_group_native.av_xcvr_native_inst|av_pma:inst_av_pma|av_rx_pma:av_rx_pma|rx_pmas[0].rx_pma.rx_cdr
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	sdiii:inst164|sdiii_0002:sdiii_inst|altera_xcvr_native_av:u_phy|av_xcvr_native:gen_native_inst.av_xcvr_native_insts[0].gen_bonded_group_native.av_xcvr_native_inst|av_pma:inst_av_pma|av_rx_pma:av_rx_pma|rx_pmas[0].rx_pma.rx_pma_deser
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+

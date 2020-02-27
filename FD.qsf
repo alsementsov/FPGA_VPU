@@ -1,0 +1,961 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+# Date created = 12:13:57  June 30, 2014
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		FD_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CGXFC7D6F27I7
+set_global_assignment -name TOP_LEVEL_ENTITY FD
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:13:57  JUNE 30, 2014"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Standard Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 672
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name VCCPGM_USER_VOLTAGE 3.3V
+set_global_assignment -name VCCBAT_USER_VOLTAGE 2.5V
+set_global_assignment -name VCCE_GXBL_USER_VOLTAGE 1.1V
+set_global_assignment -name VCCE_GXBR_USER_VOLTAGE 1.1V
+set_global_assignment -name VCCL_GXBL_USER_VOLTAGE 1.1V
+set_global_assignment -name VCCL_GXBR_USER_VOLTAGE 1.1V
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_NCE_PIN OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN ON
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVCMOS"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE freeze.stp
+set_instance_assignment -name IO_STANDARD LVDS -to clk_148_p
+set_instance_assignment -name INPUT_TERMINATION "OCT 100 OHMS" -to clk_148_p
+set_instance_assignment -name IO_STANDARD LVDS -to sdi_rx_p
+set_instance_assignment -name INPUT_TERMINATION "OCT 100 OHMS" -to sdi_rx_p
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sdi_tx_p
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to "RAM1-A"
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to "RAM1-D"
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to "RAM1-D"
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to "RAM3-A"
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to "RAM3-DPA"
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to "RAM3-DPB"
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to "RAM3-DPA"
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to "RAM3-DPB"
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name BLOCK_RAM_AND_MLAB_EQUIVALENT_PAUSED_READ_CAPABILITIES "DONT CARE"
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to IN_AMETIST
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name OCP_HW_EVAL DISABLE
+set_global_assignment -name SEARCH_PATH .
+set_global_assignment -name SEARCH_PATH "sdi-library"
+set_global_assignment -name SEARCH_PATH \\
+set_global_assignment -name FLOW_DISABLE_ASSEMBLER OFF
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name IGNORE_PARTITIONS OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING OFF
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
+set_global_assignment -name TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS OFF
+set_global_assignment -name TIMING_ANALYZER_DO_CCPP_REMOVAL OFF
+set_location_assignment PIN_E9 -to LED[0]
+set_location_assignment PIN_P10 -to SDI_FAULT
+set_location_assignment PIN_L9 -to nSDI_RST
+set_location_assignment PIN_B10 -to DSW[1]
+set_location_assignment PIN_C9 -to DSW[0]
+set_location_assignment PIN_J8 -to "ALT-RELAY"
+set_location_assignment PIN_J7 -to LED[2]
+set_location_assignment PIN_G6 -to LED[1]
+set_location_assignment PIN_N10 -to SDI_RX_BYPASS
+set_location_assignment PIN_H12 -to CLKin
+set_location_assignment PIN_T1 -to sdi_rx_n
+set_location_assignment PIN_T2 -to sdi_rx_p
+set_location_assignment PIN_P6 -to clk_148_n
+set_location_assignment PIN_N7 -to clk_148_p
+set_location_assignment PIN_P2 -to sdi_tx_p
+set_location_assignment PIN_P1 -to "sdi_tx_p(n)"
+set_location_assignment PIN_J10 -to SDI_EN
+set_location_assignment PIN_D6 -to BUT
+set_location_assignment PIN_AF8 -to "RAM1-CLK"
+set_location_assignment PIN_AF7 -to "RAM2-CLK"
+set_location_assignment PIN_Y26 -to "RAM3-CLK"
+set_location_assignment PIN_R25 -to "RAM3-BWAn"
+set_location_assignment PIN_Y10 -to "RAM2-BWAn"
+set_location_assignment PIN_AB19 -to "RAM1-BWAn"
+set_location_assignment PIN_R26 -to "RAM3-BWBn"
+set_location_assignment PIN_Y11 -to "RAM2-BWBn"
+set_location_assignment PIN_AC15 -to "RAM1-BWBn"
+set_location_assignment PIN_AA21 -to "RAM1-OEn"
+set_location_assignment PIN_W12 -to "RAM2-OEn"
+set_location_assignment PIN_AA22 -to "RAM3-OEn"
+set_location_assignment PIN_AA18 -to "RAM1-D[0]"
+set_location_assignment PIN_AA16 -to "RAM1-D[1]"
+set_location_assignment PIN_AE13 -to "RAM1-D[2]"
+set_location_assignment PIN_AF14 -to "RAM1-D[3]"
+set_location_assignment PIN_Y14 -to "RAM1-D[4]"
+set_location_assignment PIN_Y15 -to "RAM1-D[5]"
+set_location_assignment PIN_AC18 -to "RAM1-D[6]"
+set_location_assignment PIN_AB17 -to "RAM1-D[7]"
+set_location_assignment PIN_AF18 -to "RAM1-D[8]"
+set_location_assignment PIN_AD20 -to "RAM1-D[9]"
+set_location_assignment PIN_AD21 -to "RAM1-D[10]"
+set_location_assignment PIN_AC19 -to "RAM1-D[11]"
+set_location_assignment PIN_AE20 -to "RAM1-D[12]"
+set_location_assignment PIN_AE19 -to "RAM1-D[13]"
+set_location_assignment PIN_AF19 -to "RAM1-D[14]"
+set_location_assignment PIN_AD18 -to "RAM1-D[15]"
+set_location_assignment PIN_Y16 -to "RAM1-DPA"
+set_location_assignment PIN_AC20 -to "RAM1-DPB"
+set_location_assignment PIN_AD13 -to "RAM1-A[0]"
+set_location_assignment PIN_AC13 -to "RAM1-A[1]"
+set_location_assignment PIN_AE21 -to "RAM1-A[2]"
+set_location_assignment PIN_AF21 -to "RAM1-A[3]"
+set_location_assignment PIN_AC17 -to "RAM1-A[4]"
+set_location_assignment PIN_AD17 -to "RAM1-A[5]"
+set_location_assignment PIN_AB15 -to "RAM1-A[6]"
+set_location_assignment PIN_AB16 -to "RAM1-A[7]"
+set_location_assignment PIN_AC14 -to "RAM1-A[8]"
+set_location_assignment PIN_AE18 -to "RAM1-A[9]"
+set_location_assignment PIN_AF17 -to "RAM1-A[10]"
+set_location_assignment PIN_AD16 -to "RAM1-A[11]"
+set_location_assignment PIN_AF16 -to "RAM1-A[12]"
+set_location_assignment PIN_AB12 -to "RAM1-A[13]"
+set_location_assignment PIN_AA14 -to "RAM1-A[14]"
+set_location_assignment PIN_AE16 -to "RAM1-A[15]"
+set_location_assignment PIN_AE15 -to "RAM1-A[16]"
+set_location_assignment PIN_AD11 -to "RAM1-A[17]"
+set_location_assignment PIN_AF13 -to "RAM1-A[18]"
+set_location_assignment PIN_AE14 -to "RAM1-A[19]"
+set_location_assignment PIN_V10 -to "RAM2-D[0]"
+set_location_assignment PIN_U11 -to "RAM2-D[1]"
+set_location_assignment PIN_T7 -to "RAM2-D[2]"
+set_location_assignment PIN_T8 -to "RAM2-D[3]"
+set_location_assignment PIN_R8 -to "RAM2-D[4]"
+set_location_assignment PIN_V9 -to "RAM2-D[5]"
+set_location_assignment PIN_U10 -to "RAM2-D[6]"
+set_location_assignment PIN_T9 -to "RAM2-D[7]"
+set_location_assignment PIN_AD10 -to "RAM2-D[8]"
+set_location_assignment PIN_AC10 -to "RAM2-D[9]"
+set_location_assignment PIN_AB10 -to "RAM2-D[10]"
+set_location_assignment PIN_AB11 -to "RAM2-D[11]"
+set_location_assignment PIN_Y9 -to "RAM2-D[12]"
+set_location_assignment PIN_W10 -to "RAM2-D[13]"
+set_location_assignment PIN_AD8 -to "RAM2-D[14]"
+set_location_assignment PIN_W8 -to "RAM2-D[15]"
+set_location_assignment PIN_W11 -to "RAM2-DPA"
+set_location_assignment PIN_Y13 -to "RAM2-DPB"
+set_location_assignment PIN_AE9 -to "RAM2-A[0]"
+set_location_assignment PIN_AF9 -to "RAM2-A[1]"
+set_location_assignment PIN_AC8 -to "RAM2-A[2]"
+set_location_assignment PIN_AC9 -to "RAM2-A[3]"
+set_location_assignment PIN_AF12 -to "RAM2-A[4]"
+set_location_assignment PIN_AD12 -to "RAM2-A[5]"
+set_location_assignment PIN_AF11 -to "RAM2-A[6]"
+set_location_assignment PIN_AE11 -to "RAM2-A[7]"
+set_location_assignment PIN_AE10 -to "RAM2-A[8]"
+set_location_assignment PIN_AE8 -to "RAM2-A[9]"
+set_location_assignment PIN_AD7 -to "RAM2-A[10]"
+set_location_assignment PIN_AF6 -to "RAM2-A[11]"
+set_location_assignment PIN_AE6 -to "RAM2-A[12]"
+set_location_assignment PIN_AA7 -to "RAM2-A[13]"
+set_location_assignment PIN_AB6 -to "RAM2-A[14]"
+set_location_assignment PIN_AD6 -to "RAM2-A[15]"
+set_location_assignment PIN_Y8 -to "RAM2-A[16]"
+set_location_assignment PIN_AA6 -to "RAM2-A[17]"
+set_location_assignment PIN_U9 -to "RAM2-A[18]"
+set_location_assignment PIN_U7 -to "RAM2-A[19]"
+set_location_assignment PIN_AC23 -to "RAM3-D[0]"
+set_location_assignment PIN_AB22 -to "RAM3-D[1]"
+set_location_assignment PIN_AC22 -to "RAM3-D[2]"
+set_location_assignment PIN_V23 -to "RAM3-D[3]"
+set_location_assignment PIN_AF24 -to "RAM3-D[4]"
+set_location_assignment PIN_AE24 -to "RAM3-D[5]"
+set_location_assignment PIN_AD23 -to "RAM3-D[6]"
+set_location_assignment PIN_AC24 -to "RAM3-D[7]"
+set_location_assignment PIN_AE25 -to "RAM3-D[8]"
+set_location_assignment PIN_AC25 -to "RAM3-D[9]"
+set_location_assignment PIN_AD26 -to "RAM3-D[10]"
+set_location_assignment PIN_AD25 -to "RAM3-D[11]"
+set_location_assignment PIN_AB25 -to "RAM3-D[12]"
+set_location_assignment PIN_AB26 -to "RAM3-D[13]"
+set_location_assignment PIN_AA24 -to "RAM3-D[14]"
+set_location_assignment PIN_AA26 -to "RAM3-D[15]"
+set_location_assignment PIN_AE23 -to "RAM3-DPA"
+set_location_assignment PIN_AE26 -to "RAM3-DPB"
+set_location_assignment PIN_V24 -to "RAM3-A[0]"
+set_location_assignment PIN_U26 -to "RAM3-A[1]"
+set_location_assignment PIN_AB24 -to "RAM3-A[2]"
+set_location_assignment PIN_AA23 -to "RAM3-A[3]"
+set_location_assignment PIN_W25 -to "RAM3-A[4]"
+set_location_assignment PIN_Y25 -to "RAM3-A[5]"
+set_location_assignment PIN_V25 -to "RAM3-A[6]"
+set_location_assignment PIN_W26 -to "RAM3-A[7]"
+set_location_assignment PIN_T26 -to "RAM3-A[8]"
+set_location_assignment PIN_U24 -to "RAM3-A[9]"
+set_location_assignment PIN_U25 -to "RAM3-A[10]"
+set_location_assignment PIN_Y23 -to "RAM3-A[11]"
+set_location_assignment PIN_Y24 -to "RAM3-A[12]"
+set_location_assignment PIN_AD22 -to "RAM3-A[13]"
+set_location_assignment PIN_AF23 -to "RAM3-A[14]"
+set_location_assignment PIN_R24 -to "RAM3-A[15]"
+set_location_assignment PIN_M25 -to "RAM3-A[16]"
+set_location_assignment PIN_AF22 -to "RAM3-A[17]"
+set_location_assignment PIN_P26 -to "RAM3-A[18]"
+set_location_assignment PIN_N25 -to "RAM3-A[19]"
+set_location_assignment PIN_C23 -to "ATM-DATA[8]"
+set_location_assignment PIN_E23 -to "ATM-ADR[2]"
+set_location_assignment PIN_C22 -to "ATM-ADR[1]"
+set_location_assignment PIN_C20 -to "ATM-DATA[1]"
+set_location_assignment PIN_D20 -to "ATM-ADR[0]"
+set_location_assignment PIN_E20 -to "ATM-DATA[7]"
+set_location_assignment PIN_C19 -to "ATM-DATA[6]"
+set_location_assignment PIN_D18 -to "ATM-DATA[0]"
+set_location_assignment PIN_A13 -to "ATM-DATA[2]"
+set_location_assignment PIN_A12 -to "ATM-DATA[5]"
+set_location_assignment PIN_B12 -to "ATM-ADR[4]"
+set_location_assignment PIN_A11 -to "ATM-ADR[5]"
+set_location_assignment PIN_B11 -to "ATM-DATA[4]"
+set_location_assignment PIN_D11 -to "ATM-ADR[3]"
+set_location_assignment PIN_C10 -to "ATM-DATA[3]"
+set_location_assignment PIN_B9 -to "RTS-485"
+set_location_assignment PIN_B26 -to IN_AMETIST
+set_location_assignment PIN_K26 -to MISO
+set_location_assignment PIN_J26 -to MOSI
+set_location_assignment PIN_G26 -to nEE_Enable
+set_instance_assignment -name FAST_OUTPUT_REGISTER OFF -to "RAM2-A"
+set_instance_assignment -name FAST_INPUT_REGISTER OFF -to "RAM2-D"
+set_instance_assignment -name FAST_OUTPUT_REGISTER OFF -to "RAM2-D"
+set_instance_assignment -name FAST_INPUT_REGISTER OFF -to "RAM3-D"
+set_instance_assignment -name FAST_OUTPUT_REGISTER OFF -to "RAM3-D"
+set_instance_assignment -name FAST_INPUT_REGISTER OFF -to "RAM1-DPA"
+set_instance_assignment -name FAST_INPUT_REGISTER OFF -to "RAM1-DPB"
+set_instance_assignment -name FAST_OUTPUT_REGISTER OFF -to "RAM1-DPA"
+set_instance_assignment -name FAST_OUTPUT_REGISTER OFF -to "RAM1-DPB"
+set_instance_assignment -name FAST_INPUT_REGISTER OFF -to "RAM2-DPA"
+set_instance_assignment -name FAST_INPUT_REGISTER OFF -to "RAM2-DPB"
+set_instance_assignment -name FAST_OUTPUT_REGISTER OFF -to "RAM2-DPA"
+set_instance_assignment -name FAST_OUTPUT_REGISTER OFF -to "RAM2-DPB"
+set_location_assignment PIN_A21 -to OSD[1]
+set_location_assignment PIN_B22 -to OSD[2]
+set_location_assignment PIN_A24 -to OSD[3]
+set_location_assignment PIN_B26 -to OSD[4]
+set_location_assignment PIN_C25 -to OSD[5]
+set_global_assignment -name OPTIMIZATION_TECHNIQUE SPEED
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to MISO
+set_location_assignment PIN_M26 -to SCLK
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to SCLK
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to MOSI
+set_location_assignment PIN_D22 -to ATM_WIRE
+set_global_assignment -name OPTIMIZE_POWER_DURING_SYNTHESIS "EXTRA EFFORT"
+set_global_assignment -name SYNTH_MESSAGE_LEVEL LOW
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MISO
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MOSI
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SCLK
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to "RAM1-D"
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to "RAM2-D"
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to "RAM3-D"
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to "RAM1-DPA"
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to "RAM1-DPB"
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to "RAM2-DPA"
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to "RAM2-DPB"
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to "RAM3-DPA"
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to "RAM3-DPB"
+set_global_assignment -name BDF_FILE FD.bdf
+set_global_assignment -name QIP_FILE lpm_counter1.qip
+set_global_assignment -name QIP_FILE compare_1.qip
+set_global_assignment -name QIP_FILE lpm_counter0hggh.qip
+set_global_assignment -name QIP_FILE sdi_out.qip
+set_global_assignment -name SIP_FILE sdi_out.sip
+set_global_assignment -name QIP_FILE vftr.qip
+set_global_assignment -name QIP_FILE sdiout.qip
+set_global_assignment -name QIP_FILE tst.qip
+set_global_assignment -name QIP_FILE lpm_constant0ssd.qip
+set_global_assignment -name SDC_FILE FD.sdc
+set_global_assignment -name QIP_FILE sdi_1_out.qip
+set_global_assignment -name QIP_FILE fifa.qip
+set_global_assignment -name QIP_FILE sdi_in.qip
+set_global_assignment -name SIP_FILE sdi_in.sip
+set_global_assignment -name QIP_FILE lpm_counter15f.qip
+set_global_assignment -name QIP_FILE lpm_compare24.qip
+set_global_assignment -name QIP_FILE lpm_counter15fg.qip
+set_global_assignment -name QIP_FILE lpm_mux8HF.qip
+set_global_assignment -name QIP_FILE lpm_constant0hds.qip
+set_global_assignment -name QIP_FILE lpm_counter15j.qip
+set_global_assignment -name QIP_FILE lpm_mux11tt.qip
+set_global_assignment -name QIP_FILE lpm_compare0hh.qip
+set_global_assignment -name QIP_FILE lpm_constant0jhjh.qip
+set_global_assignment -name QIP_FILE counter_2.qip
+set_global_assignment -name BDF_FILE IMP.bdf
+set_global_assignment -name QIP_FILE counter_X.qip
+set_global_assignment -name QIP_FILE compare_MORE.qip
+set_global_assignment -name QIP_FILE mux_MIN.qip
+set_global_assignment -name QIP_FILE lpm_mux23FE.qip
+set_global_assignment -name QIP_FILE add_XP2.qip
+set_global_assignment -name QIP_FILE lpm_constant4gbj.qip
+set_global_assignment -name QIP_FILE lpm_constant4lkgh.qip
+set_global_assignment -name QIP_FILE lpm_comparegfx.qip
+set_global_assignment -name QIP_FILE lpm_constant_x1.qip
+set_global_assignment -name QIP_FILE lpm_constant_y1.qip
+set_global_assignment -name QIP_FILE lpm_constant_x2.qip
+set_global_assignment -name QIP_FILE lpm_constant_y2.qip
+set_global_assignment -name QIP_FILE lpm_constant_x3.qip
+set_global_assignment -name QIP_FILE lpm_constant_y3.qip
+set_global_assignment -name QIP_FILE lpm_constant_x4.qip
+set_global_assignment -name QIP_FILE lpm_constant_y4.qip
+set_global_assignment -name QIP_FILE lpm_constant_x5.qip
+set_global_assignment -name QIP_FILE lpm_constant_y5.qip
+set_global_assignment -name QIP_FILE lpm_constant_x6.qip
+set_global_assignment -name QIP_FILE lpm_constant_y6.qip
+set_global_assignment -name QIP_FILE lpm_add_sub5JHNH.qip
+set_global_assignment -name QIP_FILE lpm_compare25K.qip
+set_global_assignment -name QIP_FILE lpm_compare25JH.qip
+set_global_assignment -name QIP_FILE lpm_compare25FF.qip
+set_global_assignment -name QIP_FILE lpm_compare25GFR.qip
+set_global_assignment -name QIP_FILE lpm_counter2HJHY.qip
+set_global_assignment -name BDF_FILE DFF1.bdf
+set_global_assignment -name QIP_FILE lpm_add_sub5LKL.qip
+set_global_assignment -name QIP_FILE lpm_mux0GHHHH.qip
+set_global_assignment -name BDF_FILE Y_CORR.bdf
+set_global_assignment -name QIP_FILE lpm_compareY42.qip
+set_global_assignment -name QIP_FILE lpm_compareY1120.qip
+set_global_assignment -name QIP_FILE lpm_subY.qip
+set_global_assignment -name QIP_FILE lpm_muxHGDSET.qip
+set_global_assignment -name QIP_FILE lpm_compare25IHJGH.qip
+set_global_assignment -name QIP_FILE lpm_compare25GBDD.qip
+set_global_assignment -name QIP_FILE lpm_compare_zero.qip
+set_global_assignment -name QIP_FILE lpm_compare_zero2.qip
+set_global_assignment -name QIP_FILE lpm_counter2DFGDZS.qip
+set_global_assignment -name QIP_FILE lpm_compare2JGG.qip
+set_global_assignment -name QIP_FILE lpm_compare25VDS.qip
+set_global_assignment -name QIP_FILE lpm_constant4pki.qip
+set_global_assignment -name QIP_FILE lpm_constant4DDA.qip
+set_global_assignment -name QIP_FILE lpm_mux0.qip
+set_global_assignment -name QIP_FILE lpm_mux111.qip
+set_global_assignment -name QIP_FILE lpm_divide3H.qip
+set_global_assignment -name QIP_FILE lpm_divide3VBV.qip
+set_global_assignment -name QIP_FILE lpm_add_sub111.qip
+set_global_assignment -name BDF_FILE IMP_IN_ONE_TAKT.bdf
+set_global_assignment -name QIP_FILE lpm_compare25xxdf.qip
+set_global_assignment -name QIP_FILE lpm_compare25jvxc.qip
+set_global_assignment -name QIP_FILE lpm_add_sub5.qip
+set_global_assignment -name QIP_FILE lpm_mux1edd.qip
+set_global_assignment -name QIP_FILE lpm_mux1ddkm.qip
+set_global_assignment -name QIP_FILE lpm_decode0fdf.qip
+set_global_assignment -name QIP_FILE lpm_counter2dc.qip
+set_global_assignment -name QIP_FILE lpm_add_sub12nd.qip
+set_global_assignment -name QIP_FILE lpm_constant4fs.qip
+set_global_assignment -name QIP_FILE lpm_constant4dfsg.qip
+set_global_assignment -name QIP_FILE lpm_counter2ddf.qip
+set_global_assignment -name QIP_FILE lpm_compare0ffdse.qip
+set_global_assignment -name QIP_FILE compare_night.qip
+set_global_assignment -name QIP_FILE constant_night.qip
+set_global_assignment -name QIP_FILE lpm_counter0fdsdssc.qip
+set_global_assignment -name QIP_FILE lpm_add_sub121212.qip
+set_global_assignment -name QIP_FILE lpm_mult111.qip
+set_global_assignment -name QIP_FILE lpm_add_sub1111.qip
+set_global_assignment -name QIP_FILE lpm_counter191919.qip
+set_global_assignment -name QIP_FILE lpm_add_sub0ASAS.qip
+set_global_assignment -name QIP_FILE lpm_divide188.qip
+set_global_assignment -name QIP_FILE Compare13.qip
+set_global_assignment -name QIP_FILE lpm_compare25cvc.qip
+set_global_assignment -name QIP_FILE lpm_compare25ss.qip
+set_global_assignment -name QIP_FILE lpm_compare625.qip
+set_global_assignment -name QIP_FILE lpm_compare27.qip
+set_global_assignment -name QIP_FILE lpm_mux1DBGR.qip
+set_global_assignment -name QIP_FILE lpm_divide3DDT.qip
+set_global_assignment -name QIP_FILE lpm_compare_13.qip
+set_global_assignment -name QIP_FILE lpm_compare_HHG.qip
+set_global_assignment -name QIP_FILE div_25x20.qip
+set_global_assignment -name QIP_FILE lpm_add_1212.qip
+set_global_assignment -name QIP_FILE lpm_add_sub14.qip
+set_global_assignment -name QIP_FILE compare20.qip
+set_global_assignment -name QIP_FILE mux20.qip
+set_global_assignment -name QIP_FILE lpm_dividerrr.qip
+set_global_assignment -name QIP_FILE constant_colorf.qip
+set_global_assignment -name QIP_FILE lpm_add_sub12fdwe.qip
+set_global_assignment -name QIP_FILE lpm_divide1717.qip
+set_global_assignment -name QIP_FILE lpm_mux161616.qip
+set_global_assignment -name QIP_FILE lpm_compar88.qip
+set_global_assignment -name QIP_FILE compare0000.qip
+set_global_assignment -name QIP_FILE ladd_subxy2.qip
+set_global_assignment -name QIP_FILE add_yy.qip
+set_global_assignment -name QIP_FILE lpm_constantgcd4.qip
+set_global_assignment -name QIP_FILE lpm_compare25RR.qip
+set_global_assignment -name QIP_FILE compareDI.qip
+set_global_assignment -name QIP_FILE constant_DI.qip
+set_global_assignment -name QIP_FILE ram_mv.qip
+set_global_assignment -name QIP_FILE lpm_mux1BGFD.qip
+set_global_assignment -name QIP_FILE lpm_counter2DAWE.qip
+set_global_assignment -name QIP_FILE constant_FRAME.qip
+set_global_assignment -name QIP_FILE lpm_counter2FDVGT.qip
+set_global_assignment -name QIP_FILE lpm_counter2HJGGM.qip
+set_global_assignment -name QIP_FILE lpm_counter2GCVRTR.qip
+set_global_assignment -name QIP_FILE lpm_compare25irr.qip
+set_global_assignment -name QIP_FILE lpm_constant4gdhy.qip
+set_global_assignment -name QIP_FILE lpm_mux1f.qip
+set_global_assignment -name QIP_FILE lpm_decode0SDS.qip
+set_global_assignment -name QIP_FILE lpm_counter2GFF.qip
+set_global_assignment -name QIP_FILE lpm_compare25ttre.qip
+set_global_assignment -name QIP_FILE lpm_add_sub1er2.qip
+set_global_assignment -name QIP_FILE lpm_cjonstant4.qip
+set_global_assignment -name QIP_FILE lpm_cffompare25.qip
+set_global_assignment -name QIP_FILE pm_compare0ff.qip
+set_global_assignment -name QIP_FILE lpm_constanhgt0.qip
+set_global_assignment -name QIP_FILE lpm_mux1FTE.qip
+set_global_assignment -name QIP_FILE lpm_constant4dsd.qip
+set_global_assignment -name QIP_FILE lpm_constadnt4.qip
+set_global_assignment -name QIP_FILE flpm_constant4.qip
+set_global_assignment -name QIP_FILE lpm_add_vfdsub12.qip
+set_global_assignment -name QIP_FILE lpm_compare25.qip
+set_global_assignment -name QIP_FILE lpm_mux1.qip
+set_global_assignment -name QIP_FILE lpm_constant4DSS.qip
+set_global_assignment -name QIP_FILE onstant0.qip
+set_global_assignment -name QIP_FILE lpm_constant_spi_a.qip
+set_global_assignment -name QIP_FILE lpm_constant_spi_d.qip
+set_global_assignment -name QIP_FILE lpm_constant_spi_div.qip
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
+set_global_assignment -name VHDL_FILE "SPI-M1.vhd"
+set_global_assignment -name QIP_FILE PLL100.qip
+set_global_assignment -name VHDL_FILE spi_controllerS.vhd
+set_global_assignment -name QIP_FILE lpm_mux2SDDD.qip
+set_global_assignment -name QIP_FILE lpm_constant4dssa.qip
+set_global_assignment -name QIP_FILE lpm_constant_divsclk.qip
+set_global_assignment -name BDF_FILE HTPA80x64d.bdf
+set_global_assignment -name QIP_FILE lpm_counter2.qip
+set_global_assignment -name QIP_FILE lpm_decode0FFG.qip
+set_global_assignment -name QIP_FILE lpm_mux2DCRE.qip
+set_global_assignment -name QIP_FILE lpm_counter3555.qip
+set_global_assignment -name QIP_FILE lpm_counter_SCLK.qip
+set_global_assignment -name QIP_FILE lpm_compare26.qip
+set_global_assignment -name QIP_FILE lpm_counter3DDSW.qip
+set_global_assignment -name QIP_FILE lpm_compare28DDS.qip
+set_global_assignment -name QIP_FILE lpm_compare28S.qip
+set_global_assignment -name VERILOG_FILE htpa_mosi.v
+set_global_assignment -name QIP_FILE lpm_mux2sw.qip
+set_global_assignment -name QIP_FILE output_files/lpm_constant0.qip
+set_global_assignment -name QIP_FILE output_files/lpm_constant1.qip
+set_global_assignment -name QIP_FILE output_files/lpm_constant2.qip
+set_global_assignment -name QIP_FILE output_files/lpm_constant3.qip
+set_global_assignment -name QIP_FILE lpm_constant4gbbfgf.qip
+set_global_assignment -name QIP_FILE lpm_constant4gghghbb.qip
+set_global_assignment -name QIP_FILE tghghgh.qip
+set_global_assignment -name QIP_FILE output_files/lpm_constant4ffgrrewqs.qip
+set_global_assignment -name QIP_FILE lpm_constant4uiughoi.qip
+set_global_assignment -name VERILOG_FILE mux_serial.v
+set_global_assignment -name QIP_FILE output_files/lpm_constant4GGE.qip
+set_global_assignment -name QIP_FILE lpm_counter3.qip
+set_global_assignment -name QIP_FILE lpm_compare28HHB.qip
+set_global_assignment -name QIP_FILE lpm_divide3FFGGTY.qip
+set_global_assignment -name QIP_FILE lpm_compare04.qip
+set_global_assignment -name QIP_FILE lpm_constant4DDDDEG.qip
+set_global_assignment -name QIP_FILE lpm_constant4UIUUIUU.qip
+set_global_assignment -name QIP_FILE SCSS.qip
+set_global_assignment -name VERILOG_FILE YCBCR.v
+set_global_assignment -name QIP_FILE lpm_constant45656554.qip
+set_global_assignment -name BDF_FILE "HTPA-CONTROLLER.bdf"
+set_global_assignment -name VERILOG_FILE "HTPA-READER.v"
+set_global_assignment -name VERILOG_FILE HTPA_READER.v
+set_global_assignment -name QIP_FILE lpm_counter4uyyu76.qip
+set_global_assignment -name QIP_FILE lpm_constant4fr67gghj.qip
+set_global_assignment -name QIP_FILE RAM_HTPA.qip
+set_global_assignment -name QIP_FILE htparam2.qip
+set_global_assignment -name QIP_FILE lpm_add_sub12E4SW22EER.qip
+set_global_assignment -name QIP_FILE lpm_add_sub12GEEHK8Y5554.qip
+set_global_assignment -name QIP_FILE lpm_mult0123435443221.qip
+set_global_assignment -name QIP_FILE lpm_constant457676878987989.qip
+set_global_assignment -name QIP_FILE offsetram.qip
+set_global_assignment -name QIP_FILE lpm_mux12304989.qip
+set_global_assignment -name QIP_FILE lpm_constant46yfddshdjjktr.qip
+set_global_assignment -name QIP_FILE lpm_add_sub12yhgdfrtyhugfd.qip
+set_global_assignment -name QIP_FILE lpm_compare28tt6567r44rf.qip
+set_global_assignment -name QIP_FILE lpm_mux25ggt55dre.qip
+set_global_assignment -name QIP_FILE lpm_mux444444444.qip
+set_global_assignment -name QIP_FILE lpm_add_sub12ufgttyrgr.qip
+set_global_assignment -name QIP_FILE lpm_constant477yy6765trtu.qip
+set_global_assignment -name QIP_FILE lpm_constant4tytytyfr.qip
+set_global_assignment -name QIP_FILE lpm_constant4y6uyeeds.qip
+set_global_assignment -name QIP_FILE lpm_constant4fgdferd.qip
+set_global_assignment -name QIP_FILE lpm_constant434682222.qip
+set_global_assignment -name QIP_FILE lpm_mux245564322fdffg.qip
+set_global_assignment -name QIP_FILE lpm_counterzero.qip
+set_global_assignment -name QIP_FILE lpm_counter4jihgfdfdddsws.qip
+set_global_assignment -name QIP_FILE lpm_counter4yyyyy655455fff.qip
+set_global_assignment -name QIP_FILE lpm_compare28pjigfr4rree.qip
+set_global_assignment -name SIGNALTAP_FILE stp_eeprom.stp
+set_global_assignment -name SIGNALTAP_FILE "HTPA-read.stp"
+set_global_assignment -name QIP_FILE output_files/lpm_divide0trdtds5xx.qip
+set_global_assignment -name QIP_FILE output_files/lpm_mult0565656533w.qip
+set_global_assignment -name QIP_FILE output_files/lpm_add_sub0565656rf.qip
+set_global_assignment -name QIP_FILE lpm_mult066644ggjju65.qip
+set_global_assignment -name BDF_FILE PTAT.bdf
+set_global_assignment -name BDF_FILE "ADRESS-HTPA-RAM.bdf"
+set_global_assignment -name QIP_FILE lpm_mux212345667890754.qip
+set_global_assignment -name QIP_FILE lpm_constant44HHF4.qip
+set_global_assignment -name QIP_FILE lpm_mux16_2.qip
+set_global_assignment -name QIP_FILE lpm_constant4R333556.qip
+set_global_assignment -name QIP_FILE RAM_OFFSET1.qip
+set_global_assignment -name QIP_FILE lpm_mux211112211.qip
+set_global_assignment -name QIP_FILE lpm_compare28r44r4edsdssa.qip
+set_global_assignment -name QIP_FILE lpm_divide3y7ujhyrddddd.qip
+set_global_assignment -name QIP_FILE lpm_add_sub126767544reed.qip
+set_global_assignment -name VERILOG_FILE More1023.v
+set_global_assignment -name QIP_FILE lpm_constant4y66tffr.qip
+set_global_assignment -name QIP_FILE lpm_constant4uhgtr5tddd.qip
+set_global_assignment -name SIGNALTAP_FILE "out-ram.stp"
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
+set_global_assignment -name QIP_FILE RAM_CAL.qip
+set_global_assignment -name QIP_FILE lpm_mux131314.qip
+set_global_assignment -name QIP_FILE lpm_add_sub124DDDSAAA.qip
+set_global_assignment -name QIP_FILE lpm_mux2151515.qip
+set_global_assignment -name QIP_FILE lpm_add_sub1233322456.qip
+set_global_assignment -name QIP_FILE lpm_mult_pult.qip
+set_global_assignment -name QIP_FILE lpm_constant4eeffujuu.qip
+set_global_assignment -name QIP_FILE lpm_divide0tfdssssfdrfr.qip
+set_global_assignment -name QIP_FILE lpm_mux151515.qip
+set_global_assignment -name QIP_FILE lpm_constant4wefd98765.qip
+set_global_assignment -name QIP_FILE lpm_mux11111.qip
+set_global_assignment -name QIP_FILE lpm_const1.qip
+set_global_assignment -name QIP_FILE Lpm_const2.qip
+set_global_assignment -name QIP_FILE lpm_const3.qip
+set_global_assignment -name QIP_FILE lpm_const4.qip
+set_global_assignment -name QIP_FILE sub12.qip
+set_global_assignment -name QIP_FILE mult80.qip
+set_global_assignment -name QIP_FILE mult64.qip
+set_global_assignment -name QIP_FILE lpm_divide1811.qip
+set_global_assignment -name QIP_FILE lpm_add_xxx.qip
+set_global_assignment -name VERILOG_FILE WINDOW_HTPA.v
+set_global_assignment -name SIGNALTAP_FILE sdi.stp
+set_global_assignment -name VERILOG_FILE syncword_filter.v
+set_global_assignment -name VERILOG_FILE syncword_filter_Y.v
+set_global_assignment -name SIGNALTAP_FILE xtest.stp
+set_global_assignment -name QIP_FILE sub79.qip
+set_global_assignment -name QIP_FILE lpm_compare0eeeedfd.qip
+set_global_assignment -name QIP_FILE transparency.qip
+set_global_assignment -name SIGNALTAP_FILE xy_sdi.stp
+set_global_assignment -name QIP_FILE lpm_constant4fdfsxxx.qip
+set_global_assignment -name QIP_FILE lpm_constant4asdfghk.qip
+set_global_assignment -name QIP_FILE lpm_compare2833222.qip
+set_global_assignment -name QIP_FILE lpm_compare28vbgfdew3.qip
+set_global_assignment -name QIP_FILE lpm_constant4hhhh65.qip
+set_global_assignment -name QIP_FILE lpm_constant4rtrdfxs.qip
+set_global_assignment -name QIP_FILE lpm_constant4EEDX.qip
+set_global_assignment -name QIP_FILE lpm_constant4bdcvfhhk.qip
+set_global_assignment -name QIP_FILE lpm_constant4cvvbnhiku.qip
+set_global_assignment -name QIP_FILE lpm_add_sub12ytiol.qip
+set_global_assignment -name QIP_FILE fire_mif.qip
+set_global_assignment -name BDF_FILE HTPA_coords.bdf
+set_global_assignment -name BDF_FILE HTPA.bdf
+set_global_assignment -name BDF_FILE HTPA_MAIN.bdf
+set_global_assignment -name VERILOG_FILE ERASE_1023.v
+set_global_assignment -name SIGNALTAP_FILE sdi_str.stp
+set_global_assignment -name QIP_FILE lpm_mux_2X13.qip
+set_global_assignment -name QIP_FILE lpm_mux2687766.qip
+set_global_assignment -name VERILOG_FILE HTPA_READER1310.v
+set_global_assignment -name QIP_FILE lpm_constant_biastrim.qip
+set_global_assignment -name QIP_FILE lpm_constant_bpa.qip
+set_global_assignment -name QIP_FILE lpm_constant_clktrim.qip
+set_global_assignment -name QIP_FILE lpm_constant_tdel.qip
+set_global_assignment -name QIP_FILE lpm_add_sub12DDSSSA.qip
+set_global_assignment -name QIP_FILE lpm_mux_2X9.qip
+set_global_assignment -name QIP_FILE lpm_mux_2X12.qip
+set_global_assignment -name QIP_FILE lpm_add_sub12121212.qip
+set_global_assignment -name QIP_FILE RAM_HTPA_MASK.qip
+set_global_assignment -name VERILOG_FILE HTPA_BLOB.v
+set_global_assignment -name SIGNALTAP_FILE HTPA_BLOB.stp
+set_global_assignment -name VERILOG_FILE HTPA_RAM_SCAN.v
+set_global_assignment -name BDF_FILE "HTPA-BLOB.bdf"
+set_global_assignment -name QIP_FILE add_7_2.qip
+set_global_assignment -name QIP_FILE RAM_LINE1H.qip
+set_global_assignment -name QIP_FILE RAM_NPIXEL.qip
+set_global_assignment -name QIP_FILE RAM_XYH.qip
+set_global_assignment -name QIP_FILE lpm_mux_2X10.qip
+set_global_assignment -name BDF_FILE WINDOW_H.bdf
+set_global_assignment -name QIP_FILE add_13.qip
+set_global_assignment -name BDF_FILE MINIMUM_h.bdf
+set_global_assignment -name QIP_FILE add_9_p1.qip
+set_global_assignment -name QIP_FILE compare_9_c0.qip
+set_global_assignment -name QIP_FILE compare_moreH.qip
+set_global_assignment -name QIP_FILE RAM_T1H.qip
+set_global_assignment -name QIP_FILE RAM_T2H.qip
+set_global_assignment -name QIP_FILE COMPARE_25_R0.qip
+set_global_assignment -name VERILOG_FILE BBOX_CROSS_H.v
+set_global_assignment -name VERILOG_FILE BBOX_FILTER_H.v
+set_global_assignment -name QIP_FILE fifo_bboxh.qip
+set_global_assignment -name QIP_FILE counter_9.qip
+set_global_assignment -name QIP_FILE lpm_counter_999.qip
+set_global_assignment -name BDF_FILE TABLE_FILTER_h.bdf
+set_global_assignment -name QIP_FILE add_9_1.qip
+set_global_assignment -name BDF_FILE expansion_H.bdf
+set_global_assignment -name QIP_FILE lpm_compare_9_0.qip
+set_global_assignment -name QIP_FILE lpm_mux_2X7.qip
+set_global_assignment -name QIP_FILE lpm_mux_2x6.qip
+set_global_assignment -name QIP_FILE lpm_compare_6_aleb.qip
+set_global_assignment -name QIP_FILE lpm_compare_7_alb.qip
+set_global_assignment -name QIP_FILE lpm_compare_7_agb.qip
+set_global_assignment -name SIGNALTAP_FILE "BLOB-TEST.stp"
+set_global_assignment -name VERILOG_FILE test_blb.v
+set_global_assignment -name QIP_FILE constant_xo.qip
+set_global_assignment -name QIP_FILE constant_xn.qip
+set_global_assignment -name QIP_FILE constant_yo.qip
+set_global_assignment -name QIP_FILE constant_yn.qip
+set_global_assignment -name QIP_FILE constant_x2o.qip
+set_global_assignment -name QIP_FILE constant_y2o.qip
+set_global_assignment -name QIP_FILE constant_x2n.qip
+set_global_assignment -name QIP_FILE lconstant_y2n.qip
+set_global_assignment -name QIP_FILE constant_x3o.qip
+set_global_assignment -name QIP_FILE constant_y3o.qip
+set_global_assignment -name QIP_FILE constant_x3n.qip
+set_global_assignment -name QIP_FILE constant_y3n.qip
+set_global_assignment -name SIGNALTAP_FILE "cross-TEST.stp"
+set_global_assignment -name QIP_FILE lpm_mux_2x1.qip
+set_global_assignment -name QIP_FILE compare_9_p0.qip
+set_global_assignment -name BDF_FILE HTPA_TARGET.bdf
+set_global_assignment -name QIP_FILE lpm_mux_26X2.qip
+set_global_assignment -name BDF_FILE HTPA_FIND_JUNCTION.bdf
+set_global_assignment -name BDF_FILE HTPA_More_less.bdf
+set_global_assignment -name BDF_FILE HTPA_CPU_Controller.bdf
+set_global_assignment -name BDF_FILE Targets_Controller24.bdf
+set_global_assignment -name BDF_FILE Targets_Controller16.bdf
+set_global_assignment -name VERILOG_FILE Find_first_zero16.v
+set_global_assignment -name BDF_FILE HTPA_CPU.bdf
+set_global_assignment -name QIP_FILE lpm_mux_2X8.qip
+set_global_assignment -name QIP_FILE RAM_LOSS_H.qip
+set_global_assignment -name QIP_FILE RAMMVH.qip
+set_global_assignment -name QIP_FILE RAMMVP_H.qip
+set_global_assignment -name QIP_FILE lpm_mux_2X26.qip
+set_global_assignment -name QIP_FILE compare_7_B0.qip
+set_global_assignment -name QIP_FILE lpm_decode_4.qip
+set_global_assignment -name QIP_FILE lpm_mux_16X28.qip
+set_global_assignment -name VERILOG_FILE HTPA_DRAW.v
+set_global_assignment -name QIP_FILE lpm_constant4sdssqa.qip
+set_global_assignment -name BDF_FILE "CROSS-FINDER.bdf"
+set_global_assignment -name QIP_FILE lpm_counter4dswwaaa.qip
+set_global_assignment -name BDF_FILE HTARGET.bdf
+set_global_assignment -name QIP_FILE lpm_mux_16X26.qip
+set_global_assignment -name QIP_FILE lpm_compare_26.qip
+set_global_assignment -name QIP_FILE lpm_decode_16.qip
+set_global_assignment -name BDF_FILE cross_cpu.bdf
+set_global_assignment -name QIP_FILE lpm_counter_16.qip
+set_global_assignment -name QIP_FILE lpm_compare28ugtdw.qip
+set_global_assignment -name QIP_FILE lpm_counter4sasag.qip
+set_global_assignment -name QIP_FILE lpm_compare_9.qip
+set_global_assignment -name QIP_FILE lpm_mux_2x4.qip
+set_global_assignment -name QIP_FILE lpm_constant4ghfddaac.qip
+set_global_assignment -name BDF_FILE Cross_controller.bdf
+set_global_assignment -name QIP_FILE constant_CPU_START.qip
+set_global_assignment -name QIP_FILE lpm_compare_7_aneb0.qip
+set_global_assignment -name QIP_FILE lpm_constant4cgvfxz1.qip
+set_global_assignment -name QIP_FILE lpm_constant423456789.qip
+set_global_assignment -name BDF_FILE HTPA_CPU_new.bdf
+set_global_assignment -name BDF_FILE htpa_sum_XY.bdf
+set_global_assignment -name QIP_FILE lpm_divide_10X4.qip
+set_global_assignment -name QIP_FILE Counter_SCAN.qip
+set_global_assignment -name QIP_FILE lpm_counter444444444.qip
+set_global_assignment -name BDF_FILE "DEL-REPEAT.bdf"
+set_global_assignment -name QIP_FILE lpm_compare28SSSFG.qip
+set_global_assignment -name SIGNALTAP_FILE "target-TEST.stp"
+set_global_assignment -name SIGNALTAP_FILE "TARGET-AVERAGE.stp"
+set_global_assignment -name QIP_FILE lpm_counter4XCVDFGVDF.qip
+set_global_assignment -name QIP_FILE lpm_add_sub_5_P1.qip
+set_global_assignment -name VERILOG_FILE RESET_CPU.v
+set_global_assignment -name BDF_FILE DX_DY_26.bdf
+set_global_assignment -name BDF_FILE dXdY_26.bdf
+set_global_assignment -name QIP_FILE lpm_add_sub_7.qip
+set_global_assignment -name QIP_FILE lpm_add_sub_6.qip
+set_global_assignment -name QIP_FILE le_zero.qip
+set_global_assignment -name BDF_FILE SYNC_dxdy_26.bdf
+set_global_assignment -name QIP_FILE lpm_mux_8.qip
+set_global_assignment -name QIP_FILE lpm_add_sub_8s.qip
+set_global_assignment -name QIP_FILE lpm_divideherda.qip
+set_global_assignment -name QIP_FILE lpm_add_sub1chfd5.qip
+set_global_assignment -name QIP_FILE lpm_divide3gdssaj.qip
+set_global_assignment -name QIP_FILE ram_dxdy26.qip
+set_global_assignment -name QIP_FILE ram_xy26.qip
+set_global_assignment -name VERILOG_FILE loss_analyze.v
+set_global_assignment -name VERILOG_FILE shift_analyze.v
+set_global_assignment -name QIP_FILE lpm_add_sub12efgjj.qip
+set_global_assignment -name QIP_FILE lpm_constant4aagjmi.qip
+set_global_assignment -name QIP_FILE lpm_constanert4.qip
+set_global_assignment -name QIP_FILE lpm_constant4fduiv.qip
+set_global_assignment -name SIGNALTAP_FILE "TARGET-analyze.stp"
+set_global_assignment -name QIP_FILE dgdsk.qip
+set_global_assignment -name VERILOG_FILE XY_MAX.v
+set_global_assignment -name QIP_FILE sub_M1.qip
+set_global_assignment -name QIP_FILE RAM_SDS.qip
+set_global_assignment -name QIP_FILE RAM_SIMPLE.qip
+set_global_assignment -name QIP_FILE lpm_compare28FGHFWT.qip
+set_global_assignment -name SIGNALTAP_FILE sub_test.stp
+set_global_assignment -name VERILOG_FILE HTPA_RAM_SCAN_STABLE.v
+set_global_assignment -name VERILOG_FILE HTPA_RAM_SCAN_2.v
+set_global_assignment -name QIP_FILE output_files/lpm_counter_13.qip
+set_global_assignment -name QIP_FILE lpm_add_sub0DAAJ.qip
+set_global_assignment -name QIP_FILE lpm_divide_23X12.qip
+set_global_assignment -name QIP_FILE RAM_SUBHTPA.qip
+set_global_assignment -name QIP_FILE RAM_HTPAG.qip
+set_global_assignment -name QIP_FILE lpm_add_sub0VDS.qip
+set_global_assignment -name QIP_FILE lpm_divide0UFDFR.qip
+set_global_assignment -name SIGNALTAP_FILE TARGETs.stp
+set_global_assignment -name QIP_FILE lpm_mux_2x36.qip
+set_global_assignment -name QIP_FILE lpm_constant4FFDUK.qip
+set_global_assignment -name QIP_FILE lpm_constant4GDSZJ.qip
+set_global_assignment -name SIGNALTAP_FILE test_bcross.stp
+set_global_assignment -name QIP_FILE lpm_mux_2x16.qip
+set_global_assignment -name QIP_FILE lpm_constant4DSDSYJ.qip
+set_global_assignment -name QIP_FILE lpm_constant4YYY.qip
+set_global_assignment -name QIP_FILE lpm_add_sub12SSVBHGH.qip
+set_global_assignment -name QIP_FILE lpm_mux_2x34.qip
+set_global_assignment -name BDF_FILE "FIRE-SOLVER.bdf"
+set_global_assignment -name QIP_FILE lpm_add_sub_6_P1.qip
+set_global_assignment -name QIP_FILE lpm_mult_7X6.qip
+set_global_assignment -name QIP_FILE lpm_divide3rgxcfgdf.qip
+set_global_assignment -name QIP_FILE lpm_add_sub12dsfvtg.qip
+set_global_assignment -name VERILOG_FILE HTPA_XY_PLUS.v
+set_global_assignment -name VERILOG_FILE HTPA_FIRE_SOLVER.v
+set_global_assignment -name QIP_FILE lpm_compare_8.qip
+set_global_assignment -name QIP_FILE lpm_constant_FIRELIFE.qip
+set_global_assignment -name QIP_FILE lpm_add_sub_7_P1.qip
+set_global_assignment -name QIP_FILE MOVE_RAM.qip
+set_global_assignment -name BDF_FILE htpa_preDIVIDER.bdf
+set_global_assignment -name QIP_FILE lpm_divide_7x3.qip
+set_global_assignment -name QIP_FILE lpm_constant4hgfxd.qip
+set_global_assignment -name QIP_FILE lpm_counter0CGFCX.qip
+set_global_assignment -name QIP_FILE lpm_decode0TRFDS.qip
+set_global_assignment -name BDF_FILE TYCO_COORDS_htpa.bdf
+set_global_assignment -name QIP_FILE lpm_add_s.qip
+set_global_assignment -name QIP_FILE lpm_compare28dd.qip
+set_global_assignment -name QIP_FILE lpm_constant4dds.qip
+set_global_assignment -name SIGNALTAP_FILE "test-atmel.stp"
+set_global_assignment -name QIP_FILE sub_255.qip
+set_global_assignment -name QIP_FILE lpm_compare0ugg.qip
+set_global_assignment -name QIP_FILE lpm_comparehfgd0.qip
+set_global_assignment -name QIP_FILE lpm_mult_10.qip
+set_global_assignment -name QIP_FILE lpm_counter4dssaa.qip
+set_global_assignment -name QIP_FILE lpm_add_sub0gfd.qip
+set_global_assignment -name SIGNALTAP_FILE osd.stp
+set_global_assignment -name QIP_FILE lpm_constant_osd.qip
+set_global_assignment -name QIP_FILE lpm_counter0g66gg.qip
+set_global_assignment -name QIP_FILE pm_constantosd.qip
+set_global_assignment -name QIP_FILE compare1111.qip
+set_global_assignment -name QIP_FILE lpm_constanttds.qip
+set_global_assignment -name QIP_FILE lpm_constant_blue.qip
+set_global_assignment -name QIP_FILE lpm_mult0112.qip
+set_global_assignment -name QIP_FILE lpm_add_sub12ffa.qip
+set_global_assignment -name QIP_FILE lpm_add_sub12gtd.qip
+set_global_assignment -name QIP_FILE "D:/AlekseyS/Desktop/lpm_add_sub0fsa.qip"
+set_global_assignment -name MIF_FILE "D:/AlekseyS/Desktop/FD.mif"
+set_global_assignment -name MIF_FILE "D:/AlekseyS/Desktop/ftest.mif"
+set_global_assignment -name QIP_FILE rom_fire.qip
+set_global_assignment -name VERILOG_FILE bmp_DRAW.v
+set_global_assignment -name QIP_FILE lpm_add_sub12sfwsq.qip
+set_global_assignment -name QIP_FILE lpm_constant4sdfsd.qip
+set_global_assignment -name QIP_FILE lpm_constant4qsx.qip
+set_global_assignment -name QIP_FILE lpm_mux_2x1111.qip
+set_global_assignment -name QIP_FILE lpm_mux_4x20.qip
+set_global_assignment -name QIP_FILE lpm_constant4sxxz.qip
+set_global_assignment -name BDF_FILE "LINE-ADR-bmp.bdf"
+set_global_assignment -name QIP_FILE lpm_mult0ff.qip
+set_global_assignment -name QIP_FILE lpm_constant4hhhj.qip
+set_global_assignment -name QIP_FILE lpm_constant4cxfg.qip
+set_global_assignment -name BDF_FILE Draw_alarm.bdf
+set_global_assignment -name QIP_FILE lpm_constant4scvt.qip
+set_global_assignment -name QIP_FILE lpm_constant4jkh.qip
+set_global_assignment -name BDF_FILE "LINE-ADR-logo.bdf"
+set_global_assignment -name QIP_FILE rom_logo.qip
+set_global_assignment -name QIP_FILE lpm_constant4dfhbg.qip
+set_global_assignment -name CDF_FILE "D:/ARCHIVE_SSD/FD_empty_8N_30/output_files/Chain1.cdf"
+set_global_assignment -name QIP_FILE sdiii.qip
+set_global_assignment -name SIP_FILE sdiii.sip
+set_global_assignment -name QIP_FILE sdiii_out.qip
+set_global_assignment -name SIP_FILE sdiii_out.sip
+set_global_assignment -name QIP_FILE lpm_mux_2x18.qip
+set_global_assignment -name QIP_FILE lpm_mux_3x36.qip
+set_global_assignment -name QIP_FILE lpm_mux_16x27.qip
+set_global_assignment -name QIP_FILE lpm_add_21.qip
+set_global_assignment -name QIP_FILE lpm_mult_1920.qip
+set_global_assignment -name QIP_FILE lpm_constant_test.qip
+set_global_assignment -name VERILOG_FILE "output_files/test-blobs.v"
+set_global_assignment -name VERILOG_FILE output_files/test_blobs.v
+set_global_assignment -name QIP_FILE const_sw.qip
+set_global_assignment -name QIP_FILE lpm_divide_18x7.qip
+set_global_assignment -name QIP_FILE lpm_constant_xo.qip
+set_global_assignment -name QIP_FILE lpm_constant_yo.qip
+set_global_assignment -name QIP_FILE lpm_compare_220.qip
+set_global_assignment -name QIP_FILE lpm_compare_7ageb.qip
+set_global_assignment -name QIP_FILE lpm_constant_CLEAR.qip
+set_global_assignment -name QIP_FILE lpm_constant_WHITE.qip
+set_global_assignment -name QIP_FILE lpm_compare_8aeb0.qip
+set_global_assignment -name QIP_FILE lpm_mux_5x16.qip
+set_global_assignment -name SIGNALTAP_FILE Imp_find.stp
+set_global_assignment -name QIP_FILE lpm_constant_find.qip
+set_global_assignment -name QIP_FILE lpm_compare0hf.qip
+set_global_assignment -name SIGNALTAP_FILE dead_wr_test.stp
+set_global_assignment -name QIP_FILE ../FD_empty_8N_36_8N/lpm_mux_5X26.qip
+set_global_assignment -name QIP_FILE ../FD_empty_8N_36_8N/lpm_cDSDS.qip
+set_global_assignment -name QIP_FILE lpm_decode55.qip
+set_global_assignment -name QIP_FILE lpm_add_sub0dfdas.qip
+set_global_assignment -name QIP_FILE lpm_mux.qip
+set_global_assignment -name QIP_FILE lpm_mux_4X16.qip
+set_global_assignment -name QIP_FILE lpm_constant_EEE.qip
+set_global_assignment -name SIGNALTAP_FILE "WR-EEPROM.stp"
+set_global_assignment -name QIP_FILE lpm_constant0dtgf.qip
+set_global_assignment -name QIP_FILE lpm_constant_xoo.qip
+set_global_assignment -name SIGNALTAP_FILE output_files/cal_read.stp
+set_global_assignment -name QIP_FILE lpm_compare16_frf.qip
+set_global_assignment -name QIP_FILE lpm_constant0yhsdrtgctf.qip
+set_global_assignment -name QIP_FILE sdias.qip
+set_global_assignment -name SIP_FILE sdias.sip
+set_global_assignment -name QIP_FILE lpm_compare0fdnh.qip
+set_global_assignment -name VERILOG_FILE Tmax_Targets.v
+set_global_assignment -name QIP_FILE lpm_mux_15X10.qip
+set_global_assignment -name QIP_FILE lpm_sdsdfsd.qip
+set_global_assignment -name BDF_FILE Tmax.bdf
+set_global_assignment -name BDF_FILE Th_adaptive.bdf
+set_global_assignment -name QIP_FILE sub_10.qip
+set_global_assignment -name QIP_FILE lpm_comeddpare0.qip
+set_global_assignment -name QIP_FILE add_10.qip
+set_global_assignment -name VERILOG_FILE FSOLVER.v
+set_global_assignment -name QIP_FILE lpm_comdfd.qip
+set_global_assignment -name QIP_FILE lpm_dividehf08.qip
+set_global_assignment -name QIP_FILE lpm_constanfs.qip
+set_global_assignment -name QIP_FILE lpffpare0.qip
+set_global_assignment -name QIP_FILE lpm_ddant0.qip
+set_global_assignment -name QIP_FILE lpm_counter0.qip
+set_global_assignment -name QIP_FILE lpm_const0.qip
+set_global_assignment -name BDF_FILE Ymean_new.bdf
+set_global_assignment -name QIP_FILE lpm_comare0.qip
+set_global_assignment -name QIP_FILE ld_su.qip
+set_global_assignment -name QIP_FILE lpm_vide.qip
+set_global_assignment -name QIP_FILE lpare0.qip
+set_global_assignment -name QIP_FILE lpm_conuujstant0.qip
+set_global_assignment -name QIP_FILE lpm_conhyhstant0.qip
+set_global_assignment -name QIP_FILE lpm_coareT0.qip
+set_global_assignment -name QIP_FILE lpm_constant0ds.qip
+set_global_assignment -name QIP_FILE output_files/lpmffsub0.qip
+set_global_assignment -name QIP_FILE sub5.qip
+set_global_assignment -name QIP_FILE output_files/lf_sub0.qip
+set_global_assignment -name QIP_FILE y_add_sub0.qip
+set_global_assignment -name QIP_FILE lpm_adhghd_sub0.qip
+set_global_assignment -name SIGNALTAP_FILE output_files/Tfon_test.stp
+set_global_assignment -name SIGNALTAP_FILE box_test.stp
+set_global_assignment -name SIGNALTAP_FILE SOLVER_info.stp
+set_global_assignment -name SIGNALTAP_FILE SOLVER_info_work.stp
+set_global_assignment -name QIP_FILE m_add_sub0.qip
+set_global_assignment -name QIP_FILE lpm_constant0ggf.qip
+set_global_assignment -name QIP_FILE pll72.qip
+set_global_assignment -name SIP_FILE pll72.sip
+set_global_assignment -name QIP_FILE lpm_compare_90.qip
+set_global_assignment -name QIP_FILE lpm_counter_3.qip
+set_global_assignment -name SIGNALTAP_FILE output_files/badfocus.stp
+set_global_assignment -name QIP_FILE dd_sub0.qip
+set_global_assignment -name QIP_FILE lpm_divide0FFFEXC.qip
+set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name QIP_FILE lpm_compare0fdxs.qip
+set_global_assignment -name QIP_FILE lpm_compare0ydf4.qip
+set_global_assignment -name QIP_FILE lpm_divide_13x10.qip
+set_global_assignment -name QIP_FILE lpm_divide_10x6.qip
+set_global_assignment -name QIP_FILE lpm_divide_7x4.qip
+set_global_assignment -name QIP_FILE pare0.qip
+set_global_assignment -name QIP_FILE lpm_add_su.qip
+set_global_assignment -name QIP_FILE lpm_mux_2x40.qip
+set_global_assignment -name QIP_FILE lpm_divide0cgfxv.qip
+set_global_assignment -name QIP_FILE lpm_counter1212.qip
+set_global_assignment -name QIP_FILE lpm_compare_5_0.qip
+set_global_assignment -name QIP_FILE rom_dust.qip
+set_global_assignment -name QIP_FILE lpm_mux_2_14.qip
+set_global_assignment -name QIP_FILE lpm_constad.qip
+set_global_assignment -name BDF_FILE Distortion.bdf
+set_global_assignment -name QIP_FILE lpm_add_sub0sdxcx.qip
+set_global_assignment -name QIP_FILE lpm_add_sub0fdssx.qip
+set_global_assignment -name QIP_FILE lpm_mult0dsdsd.qip
+set_global_assignment -name QIP_FILE lpm_mult0ffgdsr.qip
+set_global_assignment -name QIP_FILE lpm_add_sub0ssazwcd.qip
+set_global_assignment -name QIP_FILE lpm_mult0sxfdxz.qip
+set_global_assignment -name QIP_FILE lpm_add_subccdsa0.qip
+set_global_assignment -name QIP_FILE lpm_mddfex.qip
+set_global_assignment -name QIP_FILE lpm_divide0xede.qip
+set_global_assignment -name QIP_FILE lpm_mult0ffdcxcd.qip
+set_global_assignment -name QIP_FILE lpm_divide0ffgf.qip
+set_global_assignment -name QIP_FILE lpm_add_hhjmsub0.qip
+set_global_assignment -name QIP_FILE lpm_add_sub0kjmnj.qip
+set_global_assignment -name QIP_FILE lpm_add_sub0ffexdhj.qip
+set_global_assignment -name QIP_FILE lpm_constant0GBES.qip
+set_global_assignment -name QIP_FILE lpm_consd.qip
+set_global_assignment -name QIP_FILE lpm_consta.qip
+set_global_assignment -name SIGNALTAP_FILE output_files/distortion_test.stp
+set_global_assignment -name QIP_FILE lpm_constant0gfgfg.qip
+set_global_assignment -name BDF_FILE "HTPA-BLOB-work.bdf"
+set_global_assignment -name QIP_FILE lpm_compare0CDCDXS.qip
+set_global_assignment -name VERILOG_FILE Div2N.v
+set_global_assignment -name QIP_FILE lpm_mux_2x32.qip
+set_global_assignment -name SIGNALTAP_FILE Cal_test.stp
+set_global_assignment -name SIGNALTAP_FILE Pent.stp
+set_global_assignment -name QIP_FILE lpm_add_sub0fcd.qip
+set_global_assignment -name QIP_FILE lpm_add_sub0sdef.qip
+set_global_assignment -name QIP_FILE "D:/AlekseyS/Desktop/lpm_mux0vdxxx.qip"
+set_global_assignment -name QIP_FILE "D:/AlekseyS/Desktop/lpm_constant0ghghghng.qip"
+set_global_assignment -name VERILOG_FILE summabit.v
+set_global_assignment -name BDF_FILE "HTPA-BLOB_stable.bdf"
+set_global_assignment -name QIP_FILE lpm_compare0jhgfde.qip
+set_global_assignment -name QIP_FILE lpm_constdfr34.qip
+set_global_assignment -name QIP_FILE const_stop.qip
+set_global_assignment -name QIP_FILE lpm_mux_2x5.qip
+set_global_assignment -name VERILOG_FILE Find_first_zero.v
+set_global_assignment -name SYSTEMVERILOG_FILE Tmax_sv.sv
+set_global_assignment -name SIGNALTAP_FILE freeze.stp
+set_global_assignment -name VERILOG_FILE udecoder.v
+set_global_assignment -name QIP_FILE lpm_constant0.qip
+set_global_assignment -name QIP_FILE output_files/lpm_add_sub0.qip
+set_global_assignment -name QIP_FILE output_files/lpm_add_sub1.qip
+set_global_assignment -name QIP_FILE output_files/lpm_add_sub2.qip
+set_global_assignment -name QIP_FILE lpm_constant1.qip
+set_global_assignment -name QIP_FILE lpm_compare0.qip
+set_global_assignment -name QIP_FILE output_files/lpm_add_sub3.qip
+set_global_assignment -name QIP_FILE lpm_compare1.qip
+set_global_assignment -name QIP_FILE lpm_compare2.qip
+set_global_assignment -name QIP_FILE lpm_counter4.qip
+set_global_assignment -name QIP_FILE lpm_compare3.qip
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
