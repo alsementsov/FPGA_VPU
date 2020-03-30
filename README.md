@@ -1,3 +1,2 @@
 # FPGA_VPU
-Flamedex
-Intel Quartus
+IDE: Intel Quartus
